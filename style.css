@@ -1,0 +1,120 @@
+.checked {
+    text-decoration: line-through;
+    color: #f41a0b;
+}
+
+:root {
+    --primary-color: #a0445f;
+    --secondary-color: #260314;
+    --text-color: #e7bcc6;
+    --error-color: #f41a0b;
+    --border-radius: 20px;
+    --padding: 10px;
+    --font-family: "Oxanium", sans-serif;
+    --font-optical-sizing: auto;
+    --font-weight: <weight>;
+    --font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Oxanium", sans-serif;
+    background-color: black;
+    color: rgb(240, 210, 215);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding);
+}
+
+h1 {
+    margin-top: 200px;
+    margin-bottom: 60px;
+    font-size: 3rem;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap:0px;
+    margin-bottom: 10px;
+}
+
+
+input[type="text"] {
+    padding: var(--padding);
+    border: 1px solid var(--text-color);
+    border-radius: var(--border-radius);
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+button {
+    padding: var(--padding);
+    background-color: var(--primary-color);
+    color: rgb(234, 221, 226);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+fieldset {
+    border: 1px solid var(--text-color);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    width: 100%;
+    max-width: 400px;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+li {
+    background-color: #372126;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding);
+    border-bottom: 1px solid #e3bbc5;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: rgb(229, 188, 188);
+}
+
+
+.close {
+    cursor: pointer;
+    color: var(--error-color);
+    font-weight: bold;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: darken(var(--error-color), 10%);
+}
